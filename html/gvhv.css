@@ -1,0 +1,18 @@
+.title {
+    font-size: 40px;
+    text-align: center;
+    padding: 0 0 10px 0;
+}
+
+.my-carousel {
+    padding: 0;
+}
+
+.my-carousel .carousel-item {
+    display: flex;
+    max-height: 500px;
+}
+
+.my-carousel .carousel-item img {
+    object-fit: cover;
+}

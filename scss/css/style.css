@@ -90,7 +90,7 @@ body {
   flex: 1 1 auto;
 }
 
-.fullscreen__card {
+.fullscreen__item {
   font-size: 40px;
   letter-spacing: 5px;
   font-family: "Lora", cursive, sans-serif;
@@ -105,11 +105,11 @@ body {
   top: 45%;
   left: 20%;
 }
-.fullscreen__card .card__title {
+.fullscreen__item .item__title {
   position: relative;
   padding: 0 0 50px 0;
 }
-.fullscreen__card .card__title:before {
+.fullscreen__item .item__title:before {
   content: "LANDING PAGE FOR DODGE CHALLENGER 2021";
   position: absolute;
   top: -200px;
@@ -120,12 +120,12 @@ body {
   line-height: 150px;
   letter-spacing: 30px;
 }
-.fullscreen__card .card__button {
+.fullscreen__item .item__button {
   padding: 20px 0;
   text-align: center;
   justify-self: left;
 }
-.fullscreen__card .card__button .button {
+.fullscreen__item .item__button .button {
   font-family: "Lora", cursive, sans-serif;
   font-size: 15px;
   font-weight: bold;
@@ -136,7 +136,7 @@ body {
   border: none;
   text-align: center;
 }
-.fullscreen__card .card__button .button:hover {
+.fullscreen__item .item__button .button:hover {
   background-color: #bcbcbc;
 }
 
@@ -449,6 +449,25 @@ body {
     grid-row: span 2;
   }
 }
+.title {
+  font-size: 40px;
+  text-align: center;
+  padding: 0 0 10px 0;
+}
+
+.models-carousel {
+  padding: 0;
+}
+
+.my-carousel .carousel-item {
+  display: flex;
+  max-height: 500px;
+}
+
+.my-carousel .carousel-item img {
+  object-fit: cover;
+}
+
 .footer {
   position: relative;
   background-color: #d6bc91;
