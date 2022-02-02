@@ -320,6 +320,135 @@ body {
     grid-row: span 2;
   }
 }
+.interior {
+  display: grid;
+  min-height: 100vh;
+  grid-template: minmax(50px, 1fr) minmax(100px, 85%)/1fr;
+}
+
+.interior__title {
+  font-size: 40px;
+  letter-spacing: 5px;
+  font-family: "Lora", cursive, sans-serif;
+  font-weight: bold;
+  color: #fff;
+  padding: 30px 0 0 0;
+  text-align: center;
+}
+
+.interior__items {
+  display: grid;
+  gap: 15px;
+  grid-template: 1fr 1fr/1fr 1fr 1fr 1fr;
+}
+
+.interior__item {
+  position: relative;
+}
+.interior__item img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (min-width: 677px) {
+  .interior__item_content {
+    grid-column: span 2;
+  }
+}
+.interior__item_title {
+  font-size: 30px;
+  letter-spacing: 3px;
+  font-family: "Lora", cursive, sans-serif;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  padding: 0 0 20px 0;
+}
+
+.interior__item_text {
+  font-size: 15px;
+  letter-spacing: 3px;
+  font-family: "Lora", cursive, sans-serif;
+  font-weight: lighter;
+  color: #fff;
+  text-align: center;
+}
+
+@media (min-width: 677px) {
+  .interior__item_big {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+}
+.beast {
+  display: grid;
+  min-height: 100vh;
+  grid-template: minmax(50px, 1fr) minmax(100px, 85%)/1fr;
+}
+
+.beast__title {
+  font-size: 40px;
+  letter-spacing: 5px;
+  font-family: "Lora", cursive, sans-serif;
+  font-weight: bold;
+  color: #fff;
+  padding: 30px 0 0 0;
+  text-align: center;
+}
+
+.beast__items {
+  display: grid;
+  gap: 15px;
+  grid-template: 1fr/1fr 1fr 1fr;
+}
+
+.beast__item {
+  position: relative;
+}
+.beast__item img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (min-width: 677px) {
+  .beast__item_content {
+    grid-row: span 2;
+    padding: 30% 5%;
+  }
+}
+.beast__item_title {
+  font-size: 30px;
+  letter-spacing: 3px;
+  font-family: "Lora", cursive, sans-serif;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  padding: 0 0 20px 0;
+}
+
+.beast__item_text {
+  font-size: 15px;
+  letter-spacing: 3px;
+  font-family: "Lora", cursive, sans-serif;
+  font-weight: lighter;
+  color: #fff;
+  text-align: center;
+}
+
+@media (min-width: 677px) {
+  .beast__item_big {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+}
 .footer {
   position: relative;
   background-color: #d6bc91;
