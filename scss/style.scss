@@ -311,7 +311,7 @@ body {
 .performance__items {
   display: grid;
   gap: 10px;
-  grid-template: minmax(70%, 1fr) minmax(auto, 1fr)/1fr;
+  grid-template: minmax(100px, 70%) minmax(auto, 1fr)/1fr;
 }
 
 .performance__img {
@@ -348,6 +348,24 @@ body {
 .performance__text-text {
   @include text(20px, lighter);
   padding: 0 100px;
+}
+
+@media (max-width: 768px) {
+  .performance__text-text {
+    padding: 0 50px;
+  }
+  .performance__text-title {
+    font-size: 25px;
+  }
+  .performance__title {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .performance__text-text {
+    padding: 0 20px;
+  }
 }
 
 .exterior {
@@ -393,10 +411,44 @@ body {
 
 }
 
-@media (min-width: 677px) {
+@media (min-width: 992px) {
   .exterior__item_big {
     grid-column: span 2;
     grid-row: span 2;
+  }
+}
+
+@media (max-width: 992px) {
+  .exterior__items {
+    gap: 10px;
+    grid-template: 1fr 1fr/1fr 1fr 1fr;
+  }
+  .exterior__item_big {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 768px) {
+  .exterior__item_big {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+  .exterior__items {
+    gap: 10px;
+    grid-template: repeat(3,1fr)/1fr 1fr;
+  }
+  .exterior__item_title {
+    font-size: 25px;
+  }
+  .exterior__title {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .exterior__items {
+    gap: 10px;
+    grid-template: repeat(3,1fr)/1fr 1fr;
   }
 }
 
@@ -432,11 +484,6 @@ body {
 .interior__item_content {
 }
 
-@media (min-width: 677px) {
-  .interior__item_content {
-    grid-column: span 2;
-  }
-}
 
 .interior__item_title {
   @include text(30px, bold);
@@ -448,10 +495,49 @@ body {
 
 }
 
-@media (min-width: 677px) {
+@media (max-width: 998px) {
+  .interior__items {
+    gap: 10px;
+    grid-template: 1fr 1fr/ 1fr 1fr;
+  }
+}
+
+@media (max-width: 992px) {
+  .interior__title {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .interior__items {
+    grid-template: repeat(8, 1fr)/1fr 1fr;
+  }
+  .interior__item {
+    grid-row: span 2;
+    grid-column: span 2;
+  }
+  .interior__item_content {
+    grid-column: span 2;
+  }
+  .interior {
+    grid-template: minmax(50px, 1fr) minmax(100px, 96%)/1fr;
+  }
+  .interior__item_content {
+    padding: 0 30px;
+  }
+  .interior__item_title {
+    font-size: 25px;
+    padding: 8px 0 0 0;
+  }
+}
+
+@media (min-width: 1000px) {
   .interior__item_big {
     grid-column: span 2;
     grid-row: span 2;
+  }
+  .interior__item_content {
+    grid-column: span 2;
   }
 }
 
