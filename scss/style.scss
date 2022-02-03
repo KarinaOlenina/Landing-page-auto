@@ -184,6 +184,7 @@ body {
     padding: 0 0 50px 0;
     @include Shadow;
   }
+  //пофиксить тень, она мешает адаптации//
 
   .item__text {
   }
@@ -222,6 +223,7 @@ body {
   position: relative;
   background-color: #000;
   color: white;
+  z-index: 2;
 
   p {
     margin: 0;
