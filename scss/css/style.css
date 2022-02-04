@@ -21,7 +21,7 @@ body {
 .fullscreen__body {
   background-color: rgba(0, 0, 0, 0.381);
   position: relative;
-  z-index: 2;
+  z-index: 3;
   display: flex;
   flex: 1 1 auto;
   flex-direction: column;
@@ -78,6 +78,12 @@ body {
     height: 70px;
   }
 }
+@media (max-width: 568px) {
+  .fullscreen__menu .menu__items li {
+    font-size: 17px;
+    padding: 0 0 0 20px;
+  }
+}
 .menu__link_first {
   text-decoration: none;
   font-weight: bold;
@@ -122,18 +128,20 @@ body {
   position: relative;
   padding: 0 0 50px 0;
 }
-.fullscreen__item .item__title:before {
-  content: "LANDING FOR DODGE 2021";
-  position: absolute;
-  top: -200px;
-  left: -250px;
-  color: #d6bc91;
-  font-size: 80px;
-  opacity: 0.05;
-  line-height: 150px;
-  letter-spacing: 30px;
-  min-width: 50px;
-  max-width: 200px;
+@media (min-width: 568px) {
+  .fullscreen__item .item__title:before {
+    content: "LANDING FOR DODGE 2021";
+    position: absolute;
+    top: -200px;
+    left: -250px;
+    color: #d6bc91;
+    font-size: 80px;
+    opacity: 0.05;
+    line-height: 150px;
+    letter-spacing: 30px;
+    min-width: 50px;
+    max-width: 200px;
+  }
 }
 .fullscreen__item .item__button {
   padding: 20px 0;
@@ -405,6 +413,10 @@ body {
   .exterior__item_big {
     grid-column: span 2;
   }
+
+  .exterior__title {
+    font-size: 30px;
+  }
 }
 @media (max-width: 768px) {
   .exterior__item_big {
@@ -484,6 +496,11 @@ body {
   text-align: center;
 }
 
+@media (max-width: 768px) {
+  .interior__items {
+    display: none;
+  }
+}
 @media (max-width: 998px) {
   .interior__items {
     gap: 10px;
@@ -495,31 +512,78 @@ body {
     font-size: 30px;
   }
 }
+@media (min-width: 769px) {
+  .w3-content {
+    display: none;
+  }
+}
 @media (max-width: 768px) {
   .interior__items {
-    grid-template: repeat(8, 1fr)/1fr 1fr;
+    display: none;
   }
 
-  .interior__item {
-    grid-row: span 2;
-    grid-column: span 2;
+  .w3-content {
+    position: relative;
+  }
+
+  .w3-content img {
+    width: 100%;
+    max-height: 340px;
+    object-fit: cover;
+  }
+
+  .r2 {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 10px 0 0 0;
   }
 
   .interior__item_content {
-    grid-column: span 2;
-  }
-
-  .interior {
-    grid-template: minmax(50px, 1fr) minmax(100px, 96%)/1fr;
-  }
-
-  .interior__item_content {
-    padding: 0 30px;
+    padding: 5px;
   }
 
   .interior__item_title {
     font-size: 25px;
-    padding: 8px 0 0 0;
+    padding: 0;
+  }
+
+  .w3-button {
+    background-color: rgba(0, 0, 0, 0.781);
+    color: #fff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+  }
+}
+@media (max-width: 576px) {
+  .w3-button {
+    width: 30px;
+    height: 30px;
+  }
+
+  .interior__item_text {
+    font-size: 13px;
+  }
+
+  .w3-content img {
+    width: 100%;
+    max-height: 240px;
+    object-fit: cover;
+  }
+}
+@media (max-width: 568px) {
+  .interior__item {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+
+  .interior__item_content {
+    grid-column: span 1;
+  }
+
+  .interior__items {
+    grid-template: repeat(4, 1fr)/1fr;
   }
 }
 @media (min-width: 1000px) {
@@ -566,10 +630,49 @@ body {
   object-fit: cover;
 }
 
-@media (min-width: 677px) {
+@media (min-width: 769px) {
   .beast__item_content {
     grid-row: span 2;
     padding: 30% 5%;
+  }
+}
+@media (max-width: 992px) {
+  .beast__item_content {
+    padding: 30% 3%;
+  }
+  .beast__item_content .beast__item_title {
+    font-size: 25px;
+  }
+
+  .beast__title {
+    font-size: 30px;
+  }
+}
+@media (max-width: 768px) {
+  .beast__item_content {
+    padding: 5% 3%;
+  }
+
+  .beast__items {
+    grid-template: minmax(50px, auto) minmax(50px, 30%)/minmax(50px, 1fr);
+  }
+}
+@media (min-width: 769px) {
+  .beast__item_big {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+}
+@media (max-width: 576px) {
+  .beast__title {
+    padding: 0 0 10px 0;
+  }
+
+  .beast__item_content .beast__item_title {
+    font-size: 20px;
+  }
+  .beast__item_content .beast__item_text {
+    font-size: 14px;
   }
 }
 .beast__item_title {
@@ -591,16 +694,13 @@ body {
   text-align: center;
 }
 
-@media (min-width: 677px) {
-  .beast__item_big {
-    grid-column: span 2;
-    grid-row: span 2;
-  }
-}
 .choose {
   display: grid;
   min-height: 100vh;
   grid-template: minmax(50px, 1fr) minmax(100px, 85%)/1fr;
+  display: grid;
+  min-height: 100vh;
+  grid-template: minmax(50px, 20%) minmax(100px, 60%) minmax(100px, 20%)/1fr;
 }
 
 .choose__title {
@@ -613,7 +713,36 @@ body {
   text-align: center;
 }
 
+.choose__content {
+  font-size: 20px;
+  letter-spacing: 3px;
+  font-family: "Lora", cursive, sans-serif;
+  font-weight: lighter;
+  color: #fff;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .choose__title {
+    font-size: 30px;
+    padding: 50px 0 10px;
+  }
+
+  .choose {
+    min-height: 60vh;
+  }
+}
+@media (max-width: 576px) {
+  .choose__title {
+    padding: 50px 0 10px;
+  }
+
+  .choose {
+    grid-template: 1fr 1fr/1fr;
+  }
+}
 .models-carousel {
+  position: relative;
   padding: 0;
 }
 
@@ -626,6 +755,7 @@ body {
 }
 
 .footer-basic {
+  z-index: 2;
   position: relative;
   padding: 40px 0;
   background-color: #eee;
