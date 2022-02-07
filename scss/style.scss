@@ -395,7 +395,6 @@ body {
 
 .performance__text-title {
   @include text(lighter);
-  padding: 0 0 20px 0;
 
 }
 
@@ -475,7 +474,6 @@ body {
 
 .exterior__item_title {
   @include text(lighter);
-  padding: 0 0 20px 0;
 }
 
 .exterior__item_text {
@@ -499,12 +497,12 @@ body {
     height: 100%;
     grid-auto-flow: column;
   }
-}
-
-@media (min-width: 576px) {
   .exterior__item_big2 {
     grid-row: span 2;
   }
+}
+
+@media (min-width: 576px) {
   .w3-content {
     display: none;
   }
@@ -592,7 +590,6 @@ body {
 
 .interior__item_title {
   @include text(lighter);
-  padding: 0 0 20px 0;
 }
 
 .interior__item_text {
@@ -701,7 +698,6 @@ body {
 
 .beast__item_title {
   @include text(lighter);
-  padding: 0 0 20px 0;
 }
 
 .beast__item_text {
